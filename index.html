@@ -8,21 +8,50 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #fdfdfd;
+            background-color: #f9f9fb;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
         #header {
             background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        #logo h1, #logo p {
-            color: #fff;
+        #logo h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        #logo p {
+            margin: 5px 0 15px;
+            font-size: 1.1em;
+        }
+        #nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        #nav ul li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        #nav ul li a:hover {
+            color: #ffe66d;
         }
         .button {
             background: linear-gradient(135deg, #ff7eb3, #ff758c);
             border: none;
-            padding: 12px 22px;
-            border-radius: 8px;
+            padding: 12px 24px;
+            border-radius: 30px;
             font-weight: bold;
             color: white;
             transition: 0.3s;
@@ -31,76 +60,92 @@
             background: linear-gradient(135deg, #ff4d6d, #ff1765);
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #2575fc;
+            margin-bottom: 20px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .portfolio-item {
-            transition: transform 0.3s;
             background: #fff;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
         .portfolio-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .portfolio-item header {
+            padding: 15px;
+        }
+        .portfolio-item h3 {
+            margin: 0;
+            color: #6a11cb;
         }
         .icons a {
             color: #fff;
-            font-size: 1.5em;
+            font-size: 1.3em;
             margin: 0 10px;
             transition: 0.3s;
         }
         .icons a:hover {
             color: #ffe66d;
         }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
+        .timeline {
+            border-left: 3px solid #2575fc;
+            padding-left: 20px;
+            margin-top: 20px;
         }
-        .tab-button {
-            padding: 10px 20px;
-            border: none;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 20px;
-            background: #eee;
-            font-weight: bold;
+        .timeline-item {
+            margin-bottom: 25px;
         }
-        .tab-button.active {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
+        .timeline-item h4 {
+            margin: 0;
+            color: #6a11cb;
         }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        h3.subsection { color: #2575fc; margin-top: 20px; }
+        .timeline-item span {
+            font-size: 0.9em;
+            color: #777;
+        }
     </style>
 </head>
-<body class="is-preload">
+<body>
 
     <!-- Header -->
     <div id="header">
-        <div class="top">
-            <div id="logo">
-                <span class="image avatar48"><img src="images/avatar.jpg" alt="Albert Faiz" /></span>
-                <h1 id="title">Albert Faiz</h1>
-                <p>Graduate Student in Data Science at UT Dallas</p>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#top"><span class="icon solid fa-home"> Home</span></a></li>
-                    <li><a href="#portfolio"><span class="icon solid fa-th"> Portfolio</span></a></li>
-                    <li><a href="#about"><span class="icon solid fa-user"> About Me</span></a></li>
-                    <li><a href="#contact"><span class="icon solid fa-envelope"> Contact</span></a></li>
-                </ul>
-            </nav>
+        <div id="logo">
+            <h1>Albert Faiz</h1>
+            <p>Graduate Student in Data Science at UT Dallas</p>
         </div>
-        <div class="bottom">
-            <ul class="icons">
-                <li><a href="https://github.com/yourusername" class="icon brands fa-github"></a></li>
-                <li><a href="https://linkedin.com/in/yourprofile" class="icon brands fa-linkedin"></a></li>
-                <li><a href="mailto:albert.faiz@utdallas.edu" class="icon solid fa-envelope"></a></li>
+        <nav id="nav">
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://github.com/yourusername" class="icon brands fa-github"></a>
+            <a href="https://linkedin.com/in/yourprofile" class="icon brands fa-linkedin"></a>
+            <a href="mailto:albert.faiz@utdallas.edu" class="icon solid fa-envelope"></a>
         </div>
     </div>
 
@@ -108,154 +153,120 @@
     <div id="main">
 
         <!-- Intro -->
-        <section id="top" class="one dark cover">
-            <div class="container">
-                <header>
-                    <h2 class="alt">Welcome to My Portfolio</h2>
-                    <p>I’m Albert Faiz, a graduate student in Data Science at UT Dallas.<br>
-                    My focus is on agriculture, geospatial analysis, machine learning, and predictive modeling.</p>
-                </header>
-                <footer>
-                    <a href="#portfolio" class="button scrolly">Explore My Work</a>
-                </footer>
-            </div>
+        <section id="top" class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I’m Albert Faiz, a data science graduate student at UT Dallas. I focus on leveraging data to solve real-world problems in agriculture, geospatial analysis, machine learning, and predictive modeling.</p>
+            <a href="#portfolio" class="button">Explore My Work</a>
         </section>
 
         <!-- Portfolio -->
-        <section id="portfolio" class="two">
-            <div class="container">
-                <header><h2>Portfolio</h2></header>
-                <p>Explore my projects categorized by themes: Agriculture, Geospatial, Machine Learning, and Visualization.</p>
+        <section id="portfolio" class="container">
+            <h2>Portfolio</h2>
+            <p>Here are some of my highlighted projects across agriculture, geospatial science, machine learning, and visualization.</p>
 
-                <div class="tabs">
-                    <button class="tab-button active" onclick="openTab(event, 'agriculture')">Agriculture</button>
-                    <button class="tab-button" onclick="openTab(event, 'geospatial')">Geospatial</button>
-                    <button class="tab-button" onclick="openTab(event, 'ml')">Machine Learning</button>
-                    <button class="tab-button" onclick="openTab(event, 'viz')">Visualization</button>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/crop_yield.jpg" alt="Crop Yield">
+                    <header>
+                        <h3>Crop Yield Prediction</h3>
+                        <p>Random Forest models using USDA soil & climate datasets to predict yield trends.</p>
+                    </header>
                 </div>
-
-                <!-- Agriculture Projects -->
-                <div id="agriculture" class="tab-content active">
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/crop-yield-prediction"><img src="images/crop_yield.jpg" alt="Crop Yield" /></a>
-                        <header><h3>Crop Yield Prediction</h3>
-                        <p>Built Random Forest models using USDA soil and climate datasets.</p></header>
-                    </article>
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/livestock-analysis"><img src="images/livestock.jpg" alt="Livestock" /></a>
-                        <header><h3>Livestock Growth Analysis</h3>
-                        <p>Computed livestock density & growth across U.S. counties with FAO GLW data.</p></header>
-                    </article>
+                <div class="portfolio-item">
+                    <img src="images/livestock.jpg" alt="Livestock">
+                    <header>
+                        <h3>Livestock Growth Analysis</h3>
+                        <p>Processed FAO GLW data to compute livestock density & growth across U.S. counties.</p>
+                    </header>
                 </div>
-
-                <!-- Geospatial Projects -->
-                <div id="geospatial" class="tab-content">
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/spatial-autocorrelation"><img src="images/spatial.jpg" alt="Spatial" /></a>
-                        <header><h3>Spatial Autocorrelation</h3>
-                        <p>Used Moran’s I to identify clustering patterns in county-level datasets.</p></header>
-                    </article>
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/geospatial-interpolation"><img src="images/map.jpg" alt="Interpolation" /></a>
-                        <header><h3>Geospatial Interpolation</h3>
-                        <p>Applied GDAL and Kriging to interpolate soil properties across regions.</p></header>
-                    </article>
+                <div class="portfolio-item">
+                    <img src="images/spatial.jpg" alt="Spatial">
+                    <header>
+                        <h3>Spatial Autocorrelation</h3>
+                        <p>Applied Moran’s I & LISA to detect spatial clustering patterns in socioeconomic data.</p>
+                    </header>
                 </div>
-
-                <!-- Machine Learning Projects -->
-                <div id="ml" class="tab-content">
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/shap-analysis"><img src="images/shap.jpg" alt="SHAP" /></a>
-                        <header><h3>SHAP Feature Analysis</h3>
-                        <p>Explained feature importance in life expectancy prediction models.</p></header>
-                    </article>
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/predictive-health"><img src="images/health.jpg" alt="Health" /></a>
-                        <header><h3>Health Outcomes Prediction</h3>
-                        <p>Predicted mortality trends using CDC datasets and XGBoost.</p></header>
-                    </article>
+                <div class="portfolio-item">
+                    <img src="images/dashboard.jpg" alt="Dashboard">
+                    <header>
+                        <h3>Interactive Dashboards</h3>
+                        <p>Developed Plotly Dash dashboards to visualize health and agricultural datasets.</p>
+                    </header>
                 </div>
-
-                <!-- Visualization Projects -->
-                <div id="viz" class="tab-content">
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/interactive-dashboard"><img src="images/dashboard.jpg" alt="Dashboard" /></a>
-                        <header><h3>Interactive Dashboards</h3>
-                        <p>Built dashboards with Plotly Dash for policy-level decision-making.</p></header>
-                    </article>
-                    <article class="item portfolio-item">
-                        <a href="https://github.com/yourusername/3d-data-cube"><img src="images/datacube.jpg" alt="Data Cube" /></a>
-                        <header><h3>3D Data Cube Visualization</h3>
-                        <p>Rendered 3D livestock density cubes by county FIPS using Matplotlib.</p></header>
-                    </article>
+                <div class="portfolio-item">
+                    <img src="images/datacube.jpg" alt="3D Cube">
+                    <header>
+                        <h3>3D Data Cube</h3>
+                        <p>Visualized livestock data as interactive 3D cubes using Matplotlib & Plotly.</p>
+                    </header>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/shap.jpg" alt="SHAP">
+                    <header>
+                        <h3>SHAP Analysis</h3>
+                        <p>Used SHAP to interpret ML models for life expectancy prediction & feature importance.</p>
+                    </header>
                 </div>
             </div>
         </section>
 
         <!-- About Me -->
-        <section id="about" class="three">
-            <div class="container">
-                <header><h2>About Me</h2></header>
-                <a href="#" class="image featured"><img src="images/about.jpg" alt="Albert Faiz" /></a>
-                <p>I am a graduate student at The University of Texas at Dallas, specializing in data science. I apply ML & geospatial methods in agriculture and public health.</p>
-                
-                <h3 class="subsection">Skills</h3>
-                <ul>
-                    <li>Python (Pandas, Geopandas, Rasterio, Dask, Scikit-learn, XGBoost)</li>
-                    <li>Machine Learning & Model Explainability (SHAP, LIME)</li>
-                    <li>Geospatial Data Processing & Remote Sensing</li>
-                    <li>Interactive Dashboards (Dash, Plotly, Streamlit)</li>
-                </ul>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>I’m a graduate student at UT Dallas specializing in data science. My expertise lies in applying machine learning, geospatial analysis, and data visualization to real-world challenges in agriculture and public health.</p>
 
-                <h3 class="subsection">Education</h3>
-                <p>MS in Data Science – The University of Texas at Dallas</p>
-                <p>BS in Computer Science – University of Chittagong</p>
+            <h3>Skills</h3>
+            <ul>
+                <li>Python (Pandas, Geopandas, Rasterio, Scikit-learn, XGBoost)</li>
+                <li>Machine Learning & Model Explainability (SHAP, LIME)</li>
+                <li>Geospatial Data Processing (GDAL, QGIS, Remote Sensing)</li>
+                <li>Interactive Dashboards (Plotly Dash, Streamlit, Tableau)</li>
+            </ul>
 
-                <h3 class="subsection">Experience</h3>
-                <p>Graduate Research Assistant – UT Dallas</p>
-                <p>Data Analyst Intern – Agricultural Research Institute</p>
+            <h3>Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>MS in Data Science – University of Texas at Dallas</h4>
+                    <span>2023 – Present</span>
+                </div>
+                <div class="timeline-item">
+                    <h4>BS in Computer Science – University of Chittagong</h4>
+                    <span>2016 – 2020</span>
+                </div>
+            </div>
+
+            <h3>Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Graduate Research Assistant – UT Dallas</h4>
+                    <span>2024 – Present</span>
+                    <p>Working on large-scale geospatial data processing & predictive modeling for agriculture and health.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Data Analyst Intern – Agricultural Research Institute</h4>
+                    <span>2021 – 2022</span>
+                    <p>Processed remote sensing and agricultural datasets for policy-level insights.</p>
+                </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="four">
-            <div class="container">
-                <header><h2>Contact</h2></header>
-                <p>Interested in collaborations or opportunities? Get in touch:</p>
-                <p><strong>Email:</strong> <a href="mailto:albert.faiz@utdallas.edu">albert.faiz@utdallas.edu</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-            </div>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Feel free to connect for collaborations or opportunities:</p>
+            <p><strong>Email:</strong> <a href="mailto:albert.faiz@utdallas.edu">albert.faiz@utdallas.edu</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
         </section>
     </div>
 
     <!-- Footer -->
-    <div id="footer">
-        <ul class="copyright">
-            <li>&copy; Albert Faiz 2025. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+    <div id="footer" style="text-align:center; padding:20px; background:#f0f0f5;">
+        <p>&copy; Albert Faiz 2025. All rights reserved.</p>
     </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        function openTab(evt, tabName) {
-            let i, tabcontent, tabbuttons;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tabbuttons = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 </body>
 </html>
