@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Albert Faiz - Data Science Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Custom styles for a modern, professional look */
+			body {
+				font-family: 'Arial', sans-serif;
+				background-color: #f4f4f9;
+				color: #333;
+			}
+			#header {
+				background: linear-gradient(135deg, #2c3e50, #3498db);
+				color: #fff;
+			}
+			#logo h1, #logo p {
+				color: #fff;
+			}
+			.button {
+				background-color: #3498db;
+				border: none;
+				padding: 10px 20px;
+				transition: background-color 0.3s;
+			}
+			.button:hover {
+				background-color: #2980b9;
+			}
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.portfolio-item {
+				transition: transform 0.3s;
+			}
+			.portfolio-item:hover {
+				transform: scale(1.05);
+			}
+			.icons a {
+				color: #fff;
+				font-size: 1.5em;
+				margin: 0 10px;
+			}
+			.icons a:hover {
+				color: #3498db;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="top">
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="Albert Faiz" /></span>
+							<h1 id="title">Albert Faiz</h1>
+							<p>Graduate Student in Data Science at UT Dallas</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+				</div>
+
+				<div class="bottom">
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/yourusername" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/yourprofile" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:albert.faiz@utdallas.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+				</div>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+							<header>
+								<h2 class="alt">Welcome to My Portfolio</h2>
+								<p>I'm Albert Faiz, a data science graduate student at UT Dallas, passionate about leveraging data to solve real-world problems in agriculture, geospatial analysis, and machine learning.</p>
+							</header>
+							<footer>
+								<a href="#portfolio" class="button scrolly">Explore My Work</a>
+							</footer>
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+							<p>Below are some of my key projects, showcasing expertise in data science, machine learning, and geospatial analysis using tools like Python, Geopandas, and Rasterio.</p>
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/crop-yield-prediction" class="image fit"><img src="images/crop_yield.jpg" alt="Crop Yield Prediction" /></a>
+										<header>
+											<h3>Crop Yield Prediction</h3>
+											<p>Developed a machine learning model to predict crop yields in Dallas County using gNATSGO soil data and Random Forest algorithms.</p>
+										</header>
+									</article>
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/livestock-analysis" class="image fit"><img src="images/livestock.jpg" alt="Livestock Analysis" /></a>
+										<header>
+											<h3>Livestock Data Analysis</h3>
+											<p>Processed FAO GLW data to compute livestock density and growth rates across U.S. counties using Geopandas and Rasterio.</p>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/spatial-autocorrelation" class="image fit"><img src="images/spatial.jpg" alt="Spatial Autocorrelation" /></a>
+										<header>
+											<h3>Spatial Autocorrelation Analysis</h3>
+											<p>Conducted Moran's I analysis to study spatial patterns in livestock and life expectancy data.</p>
+										</header>
+									</article>
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/interactive-dashboard" class="image fit"><img src="images/dashboard.jpg" alt="Interactive Dashboard" /></a>
+										<header>
+											<h3>Interactive Data Dashboard</h3>
+											<p>Built an interactive dashboard with Plotly for visualizing livestock and life expectancy trends.</p>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/3d-data-cube" class="image fit"><img src="images/datacube.jpg" alt="3D Data Cube" /></a>
+										<header>
+											<h3>3D Data Cube Visualization</h3>
+											<p>Created a 3D visualization of livestock data georectified by county FIPS codes using Matplotlib.</p>
+										</header>
+									</article>
+									<article class="item portfolio-item">
+										<a href="https://github.com/yourusername/shap-analysis" class="image fit"><img src="images/shap.jpg" alt="SHAP Analysis" /></a>
+										<header>
+											<h3>SHAP Feature Analysis</h3>
+											<p>Utilized SHAP to interpret feature importance in machine learning models for life expectancy prediction.</p>
+										</header>
+									</article>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+							<header>
+								<h2>About Me</h2>
+							</header>
+							<a href="#" class="image featured"><img src="images/about.jpg" alt="Albert Faiz" /></a>
+							<p>I am a graduate student at The University of Texas at Dallas, specializing in data science. My work focuses on applying machine learning and geospatial analysis to solve complex problems in agriculture and public health. I have extensive experience with Python, Geopandas, Rasterio, and Dask for processing large datasets, as well as creating insightful visualizations and predictive models. I am passionate about transforming raw data into actionable insights.</p>
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+							<header>
+								<h2>Contact</h2>
+							</header>
+							<p>Feel free to reach out to discuss collaborations, projects, or opportunities. You can contact me via email or connect with me on GitHub or LinkedIn.</p>
+							<div class="row">
+								<div class="col-12">
+									<p><strong>Email:</strong> <a href="mailto:albert.faiz@utdallas.edu">albert.faiz@utdallas.edu</a></p>
+									<p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+									<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<ul class="copyright">
+					<li>&copy; Albert Faiz 2025. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
