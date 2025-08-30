@@ -1,272 +1,637 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Albert Faiz - Data Science Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f9f9fb;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        #header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        #logo h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
-        #logo p {
-            margin: 5px 0 15px;
-            font-size: 1.1em;
-        }
-        #nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        #nav ul li a {
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        #nav ul li a:hover {
-            color: #ffe66d;
-        }
-        .button {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-        }
-        .button:hover {
-            background: linear-gradient(135deg, #ff4d6d, #ff1765);
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        section {
-            margin-bottom: 60px;
-        }
-        h2 {
-            font-size: 2em;
-            color: #2575fc;
-            margin-bottom: 20px;
-        }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .portfolio-item {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .portfolio-item:hover {
-            transform: scale(1.04);
-        }
-        .portfolio-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .portfolio-item header {
-            padding: 15px;
-        }
-        .portfolio-item h3 {
-            margin: 0;
-            color: #6a11cb;
-        }
-        .icons a {
-            color: #fff;
-            font-size: 1.3em;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        .icons a:hover {
-            color: #ffe66d;
-        }
-        .timeline {
-            border-left: 3px solid #2575fc;
-            padding-left: 20px;
-            margin-top: 20px;
-        }
-        .timeline-item {
-            margin-bottom: 25px;
-        }
-        .timeline-item h4 {
-            margin: 0;
-            color: #6a11cb;
-        }
-        .timeline-item span {
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
-</head>
-<body>
+	<head>
+		<title>Faiz Ahmad - Teaching Excellence Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Custom styles for a sleek, modern, vibrant look */
+			body {
+				font-family: 'Roboto', sans-serif;
+				background-color: #f0f4f8;
+				color: #333;
+				line-height: 1.6;
+			}
+			#header {
+				background: linear-gradient(135deg, #1e3c72, #2a5298);
+				color: #fff;
+				padding: 2rem 0;
+				text-align: center;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+			#logo {
+				margin-bottom: 1rem;
+			}
+			#logo h1 {
+				font-size: 2.5rem;
+				margin: 0.5rem 0;
+			}
+			#logo p {
+				font-size: 1.2rem;
+				margin: 0;
+			}
+			#nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 1rem 0 0;
+				display: flex;
+				justify-content: center;
+				gap: 1.5rem;
+			}
+			#nav ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: bold;
+				transition: color 0.3s;
+			}
+			#nav ul li a:hover {
+				color: #ffd700;
+			}
+			.section {
+				padding: 3rem 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.section header h2 {
+				font-size: 2rem;
+				margin-bottom: 1.5rem;
+				color: #2a5298;
+				border-bottom: 2px solid #2a5298;
+				padding-bottom: 0.5rem;
+			}
+			.card-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+			}
+			.card {
+				background: #fff;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				padding: 1.5rem;
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+			.card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+			}
+			.card h3 {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+				color: #1e3c72;
+			}
+			.card ul {
+				list-style-type: disc;
+				padding-left: 1.5rem;
+			}
+			.card ul li {
+				margin-bottom: 0.5rem;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-bottom: 1.5rem;
+			}
+			table th, table td {
+				border: 1px solid #ddd;
+				padding: 0.75rem;
+				text-align: left;
+			}
+			table th {
+				background-color: #2a5298;
+				color: #fff;
+			}
+			.image.featured {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				margin-bottom: 1rem;
+			}
+			#footer {
+				background: linear-gradient(135deg, #1e3c72, #2a5298);
+				color: #fff;
+				text-align: center;
+				padding: 1rem;
+				margin-top: 2rem;
+			}
+			#footer ul {
+				list-style: none;
+				padding: 0;
+			}
+			#footer ul li {
+				display: inline;
+				margin: 0 0.5rem;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-    <!-- Header -->
-    <div id="header">
-        <div id="logo">
-            <h1>Albert Faiz</h1>
-            <p>Graduate Student in Data Science at UT Dallas</p>
-        </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="icons">
-            <a href="https://github.com/yourusername" class="icon brands fa-github"></a>
-            <a href="https://linkedin.com/in/yourprofile" class="icon brands fa-linkedin"></a>
-            <a href="mailto:albert.faiz@utdallas.edu" class="icon solid fa-envelope"></a>
-        </div>
-    </div>
+		<!-- Header -->
+			<div id="header">
+				<div id="logo">
+					<span class="image avatar48"><img src="images/avatar.jpg" alt="Faiz Ahmad" /></span>
+					<h1 id="title">Faiz Ahmad</h1>
+					<p>PhD Student & Teaching Assistant in Physics at UT Dallas</p>
+				</div>
+				<nav id="nav">
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#philosophy">Philosophy</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#evidence">Evidence</a></li>
+						<li><a href="#cv">CV</a></li>
+						<li><a href="#syllabi">Syllabi</a></li>
+						<li><a href="#course-material">Course Material</a></li>
+						<li><a href="#evaluations">Evaluations</a></li>
+						<li><a href="#performance">Performance Reviews</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 
-    <!-- Main -->
-    <div id="main">
+		<!-- Main -->
+			<div id="main">
 
-        <!-- Intro -->
-        <section id="top" class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>I’m Albert Faiz, a data science graduate student at UT Dallas. I focus on leveraging data to solve real-world problems in agriculture, geospatial analysis, machine learning, and predictive modeling.</p>
-            <a href="#portfolio" class="button">Explore My Work</a>
-        </section>
+				<!-- Intro -->
+					<section id="intro" class="section dark cover">
+						<div class="container">
+							<header>
+								<h2 class="alt">President’s Teaching Excellence Award Nomination Portfolio</h2>
+								<p>Submission Date: February 1, 2025</p>
+								<p>Prepared for Committee on Effective Teaching, University of Texas at Dallas, August 30, 2025</p>
+							</header>
+						</div>
+					</section>
 
-        <!-- Portfolio -->
-        <section id="portfolio" class="container">
-            <h2>Portfolio</h2>
-            <p>Here are some of my highlighted projects across agriculture, geospatial science, machine learning, and visualization.</p>
+				<!-- Philosophy -->
+					<section id="philosophy" class="section">
+						<div class="container">
+							<header>
+								<h2>Statement of Teaching Philosophy</h2>
+							</header>
+							<div class="card">
+								<h3>1.1 Introduction and Personal Journey</h3>
+								<p>My teaching journey is encouraged by my eagerness to learn and my passion for inspiring students to achieve their goals. Over more than a decade of teaching—from physics and mathematics to language instruction across elementary to pre-undergraduate levels—I have developed a philosophy that centers on the belief that students are our future. I am convinced that guiding them to innovate, shape policy, and implement solutions is one of the most significant contributions we can make to creating a better world. Teaching is an ever-evolving journey, with no single formula for success, which makes it both exciting and immensely rewarding.</p>
+								<p>I clearly remember the moment I realized that teaching was my true calling. After graduating from the University of Chittagong, I initially balanced elementary school teaching with a side clothing business. Despite the financial rewards of the business, I found that my thoughts were continually occupied with lesson plans and grading papers. In the classroom, I felt an unparalleled sense of purpose and lost all awareness of the outside world. Even when I once taught five to seven classes a day, I remained energized and motivated. Ultimately, I decided to leave the business behind and devote myself entirely to teaching—a decision that has only deepened my conviction and passion for education.</p>
+								<p>I take great pride in watching my students succeed on a global scale. Many have gone on to study at the world’s leading universities, some have graduated and embarked on teaching careers of their own, while others have made remarkable strides in innovation, technology, and business. Although there is still much to accomplish, I find immense fulfillment in knowing that through teaching, I have the opportunity to guide and shape the minds and lives of future generations.</p>
+							</div>
+							<div class="card">
+								<h3>1.2 Core Teaching Principles</h3>
+								<h4>1.2.1 Blending Theory with Practice</h4>
+								<p>I like to show students that knowledge is best understood when theory is grounded in real-world contexts. In a typical class say on projectile motion, for instance, learners might:</p>
+								<ul>
+									<li>Derive fundamental equations from everyday scenarios (e.g., throwing a basketball).</li>
+									<li>Validate those equations via a low-cost lab experiment, highlighting the gap between ideal assumptions and observed data.</li>
+								</ul>
+								<p>By actively measuring, analyzing, and interpreting, students gain deeper conceptual understanding.</p>
+								<h4>1.2.2 Long-Term Skills over Rote Learning</h4>
+								<p>Physics can overwhelm students with formulas. Instead, I place emphasis on:</p>
+								<ul>
+									<li>Analytical Thinking: Encouraging comparisons of multiple solution paths.</li>
+									<li>Self-reflection: Students keep brief “learning journals” to reflect on why a method worked (or didn’t).</li>
+									<li>Frequent, Low-Stakes Assessments: I call them CCQ: Concept Check Question: Quick quizzes or concept checks help me identify misconceptions early.</li>
+								</ul>
+								<p>This approach fosters problem-solving resilience rather than short-term memorization.</p>
+								<h4>1.2.3 This is what an observer would see in my class: Student-Centered Engagement</h4>
+								<p>My classrooms revolve around what students do—they solve problems in groups, present intermediate steps on the board, and critique each other’s logic. Observers often notice the lively dynamic: it is not me simply delivering content, but the students themselves taking the lead in discovering and articulating key ideas.</p>
+							</div>
+							<div class="card">
+								<h3>1.3 Reflection and Adaptation</h3>
+								<p>I regularly gather feedback via:</p>
+								<ul>
+									<li>Mid-semester anonymous surveys to see which activities students find most helpful.</li>
+									<li>Observations by peers or external visitors (e.g., donors at AUW).</li>
+									<li>Personal teaching diaries documenting each lesson’s successes and challenges.</li>
+								</ul>
+								<p>These reflections shape my subsequent lessons. My goal is to remain, in essence, the “first student” in the room—continually refining my practices based on real data and student experiences.</p>
+							</div>
+							<div class="card">
+								<h3>1.4 Role of Technology</h3>
+								<p>Tools like Khan Academy or interactive simulations can enrich learning if used judiciously. I often assign short online lessons before class, freeing up in-class time for deeper, collaborative problems. Real-time data acquisition in labs (even using phone sensors) motivates students to see how theory translates into quantifiable evidence.</p>
+							</div>
+							<div class="card">
+								<h3>1.5 Evidence based learning</h3>
+								<p>I make sure that students are learning in class and there is evidence of that. Evidence sometimes I collect individual work, group work, or peer work. Sometimes I ask them concept check questions, short quizzes activities, and presentations. I try to observe them closely and look for their misconception and knowledge gaps. I then explain things that they will need to know and guide them to further resources online and in the library so that they can learn and see the bigger picture of what they are looking for and precise concepts where they have areas of improvement.</p>
+							</div>
+							<div class="card">
+								<h3>1.6 At UTD what I do</h3>
+								<p>Since Fall 2023, I have served as a Teaching Assistant in the Electromagnetism Lab at UTD. Each week, we follow a well-defined syllabus and set of instructions that ensure consistency and clarity for both instructors and students. Every Monday at 9:30 AM, I meet with the professor to set up the equipment and review the objectives of the upcoming lab session. This collaborative approach ensures that all preparatory work aligns with the established guidelines and helps students achieve the intended learning outcomes.</p>
+								<p>In the lab, I adhere closely to the detailed lab manuals and encourage students to explore the material within that framework. I am responsible for grading three key components of their work: the lab report, the pre-lab assignment, and the homework. At the start of each session, I introduce the equipment, outline the lab’s goals, highlight any safety precautions, and clearly explain the concepts that will be explored. This approach not only keeps students focused but also helps them appreciate the importance of each experimental step.</p>
+								<p>I include this experience in my teaching philosophy because I hold a deep respect for well-established, time-tested instructional methods. Before joining UTD, I was part of a team that developed syllabi and policies through years of experimentation and collaboration among dedicated educators. I understand firsthand the value of these carefully crafted guidelines, which are the result of extensive effort and expertise by our professors. Additionally, I actively provide feedback when I observe student insights that may warrant the professor’s attention, ensuring that our teaching practices continue to evolve and improve.</p>
+							</div>
+							<div class="card">
+								<h3>1.7 Conclusion</h3>
+								<p>Ultimately, my teaching philosophy focuses on fostering curiosity, connecting theory to tangible experiences, and building a culture of collaboration. By centering the classroom around what students actively do—experimenting, discussing, and reflecting—I see clear evidence that they become more confident, motivated, and better prepared for the rigorous demands of both advanced studies and real-world challenges.</p>
+							</div>
+						</div>
+					</section>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="images/crop_yield.jpg" alt="Crop Yield">
-                    <header>
-                        <h3>Crop Yield Prediction</h3>
-                        <p>Random Forest models using USDA soil & climate datasets to predict yield trends.</p>
-                    </header>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/livestock.jpg" alt="Livestock">
-                    <header>
-                        <h3>Livestock Growth Analysis</h3>
-                        <p>Processed FAO GLW data to compute livestock density & growth across U.S. counties.</p>
-                    </header>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/spatial.jpg" alt="Spatial">
-                    <header>
-                        <h3>Spatial Autocorrelation</h3>
-                        <p>Applied Moran’s I & LISA to detect spatial clustering patterns in socioeconomic data.</p>
-                    </header>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/dashboard.jpg" alt="Dashboard">
-                    <header>
-                        <h3>Interactive Dashboards</h3>
-                        <p>Developed Plotly Dash dashboards to visualize health and agricultural datasets.</p>
-                    </header>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/datacube.jpg" alt="3D Cube">
-                    <header>
-                        <h3>3D Data Cube</h3>
-                        <p>Visualized livestock data as interactive 3D cubes using Matplotlib & Plotly.</p>
-                    </header>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/shap.jpg" alt="SHAP">
-                    <header>
-                        <h3>SHAP Analysis</h3>
-                        <p>Used SHAP to interpret ML models for life expectancy prediction & feature importance.</p>
-                    </header>
-                </div>
-            </div>
-        </section>
+				<!-- Portfolio -->
+					<section id="portfolio" class="section">
+						<div class="container">
+							<header>
+								<h2>Teaching Portfolio and Activities by Year</h2>
+							</header>
+							<p>In this chapter, I highlight my <strong>teaching awards</strong>, <strong>courses taught</strong>, <strong>student performance ratings</strong>, and <strong>professional development</strong> in a year-based sequence. This chronology showcases how my responsibilities and instructional approaches have evolved over time.</p>
+							<div class="card-container">
+								<div class="card">
+									<h3>2.1 Teaching Awards and Recognitions</h3>
+									<h4>2.1.1 2022</h4>
+									<ul>
+										<li>High-Performing Class Recognition (AUW): Selected by Director Matthew Glotfelter for donor class observation. Donors praised the inclusive, active learning environment.</li>
+									</ul>
+									<p>Figure 2.1: Image. Recognition of high-performing class from my director and dean of the university while VC of the university is in the CC</p>
+									<h4>2.1.2 2016</h4>
+									<ul>
+										<li>“Extremely Comprehensive” Teaching Commendation: Former AUW Director John Remarek lauded my contributions to curriculum development in the Access Academy program.</li>
+									</ul>
+								</div>
+								<div class="card">
+									<h3>2.2 Courses Taught at UT Dallas (2023–2025)</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Semester</th>
+												<th>Course(s)</th>
+												<th>Total Enrollment</th>
+												<th>Notes</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Fall 2023</td>
+												<td>1102.102/105.F23</td>
+												<td>43</td>
+												<td>Finished. Students engage in hands-on experiments, collaborate in groups, analyze data, and communicate their findings through written lab reports, all while building scientific models and honing critical thinking skills.</td>
+											</tr>
+											<tr>
+												<td>Spring 2024</td>
+												<td>2126.109/601.S24</td>
+												<td>57</td>
+												<td>Finished. Through group labs and structured experiments, students work together to explore concepts, analyze and fit data, and produce lab reports that showcase their reasoning and problem-solving abilities.</td>
+											</tr>
+											<tr>
+												<td>Summer 2024</td>
+												<td>phys1102.1u2.24u</td>
+												<td>23</td>
+												<td>Finished. In this intensive course, students perform inquiry-based experiments and team activities to analyze data and construct scientific models, reinforcing their analytical and collaborative skills.</td>
+											</tr>
+											<tr>
+												<td>Fall 2024</td>
+												<td>2126.113/601.F24</td>
+												<td>44</td>
+												<td>Finished. Students participate in real-time data demonstrations and group problem sets, developing their ability to work collaboratively and communicate scientific ideas effectively.</td>
+											</tr>
+											<tr>
+												<td>Spring 2025</td>
+												<td>2126.104/111.S25</td>
+												<td>57</td>
+												<td>Ongoing. Students engage in advanced problem-solving through interactive tutorials and frequent presentations, continuously refining their experimental and analytical techniques.</td>
+											</tr>
+										</tbody>
+									</table>
+									<h4>Reflection on Course Progression</h4>
+									<p>For this ongoing semester, I am implementing newer strategies that I have learned from the CTL course and my self-reflection from the last semester. This includes creating an atmosphere with more engaging, interactive, and faster feedback sessions. Also, blending students to maximize the learning opportunity, and encouraging them to feel that the lab is for their own and use me whenever they need me and ensure that they are enjoying the process is on my top priority list.</p>
+								</div>
+								<div class="card">
+									<h3>2.3 Performance Ratings (Fall 2023 – Fall 2024)</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Category</th>
+												<th>Definition</th>
+												<th>Fall 23</th>
+												<th>Spr 24</th>
+												<th>Sum 24</th>
+												<th>Fall 24</th>
+												<th>Avg</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Job Knowledge</td>
+												<td>Understands concepts; applies them effectively.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Communication</td>
+												<td>Verbal/written clarity in teaching.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Planning & Org</td>
+												<td>Manages time/resources efficiently.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Reliability</td>
+												<td>Dependable; meets commitments.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Critical Thinking</td>
+												<td>Analyzes info; resolves issues logically.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Initiative</td>
+												<td>Offers creative solutions; proactive.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Teamwork</td>
+												<td>Collaborates, fosters inclusive environment.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Feedback Recep- tivity</td>
+												<td>Applies suggestions for improvement.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Teaching Resp.</td>
+												<td>Creates safe, curiosity-driven classroom.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5.0</td>
+											</tr>
+											<tr>
+												<td>Presentation</td>
+												<td>Well-structured lessons; engages students.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5.0</td>
+											</tr>
+											<tr>
+												<td>Evaluation of Work</td>
+												<td>Fair, constructive grading/feedback.</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+											<tr>
+												<td>Overall Perf.</td>
+												<td>Overall rating (1-5 scale).</td>
+												<td>5</td>
+												<td>5</td>
+												<td>5</td>
+												<td>4</td>
+												<td>4.75</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>Recommended for reappointment? Yes. Average: 4.79</p>
+									<h4>Comments on Ratings</h4>
+									<p>These consistently high marks reflect the <strong>student-centered</strong> approach I adopt. Specific praise often cites the <strong>structured group work</strong>, <strong>prompt feedback</strong>, and <strong>positive classroom environment</strong> that encourages risk-taking (making mistakes, then learning from them).</p>
+									<h4>Comments from supervising professor</h4>
+									<p>My supervising professor Dr. Lamya Saleh, and Dr. Paul Mac Alevey has made encouraging comments on performance in multiple occasions. I always like to go one step ahead to facilitate the students and experiment on methods to improve the lab experience at UT Dallas. Dr. Paul Mac Alevey made the following rewarding comment: Hi Faiz,.. many thanks for doing all that you have. Now we have video evidence it the effect not being nearly as visible as before! Thank you. Take care. Dr. Lamya Saleh wrote: Dear Faiz, I think this is exactly what Dr. Mac Alevey wanted everyone to see. He has done this himself many times but meant for it to allow all to see patterns or ideal conditions, if any! The answer to this question can be very helpful as you work with your students in the labs. Hope we can get more input from all of you guys. Thank you Faiz for putting the effort to provide the group with many trials. Take care, This is an event where I have done hours of experiments by myself to see the behavior of pairs of electrostatic apparatus in the lab. In the comments from my supervising professors, all the other TAs are cc’ed including our lab manager. This encouragement motivates me to do more such additional work for the university.</p>
+								</div>
+								<div class="card">
+									<h3>2.4 Academic Interactions Beyond the Classroom</h3>
+									<p>The following are some of the examples that I have been doing beyond the classroom that help me gather knowledge and skills set that I can incorporate for the teaching - say in preparing for the lesson plan and in-class lectures.</p>
+									<h4>2.4.1 Head of Visual Wing, Chittagong Univ. Astronomical Association (2007–2011)</h4>
+									<ul>
+										<li>Organized public science lectures and night-sky observation events.</li>
+										<li>Worked with peers to present popular science articles in weekly study circles.</li>
+									</ul>
+									<h4>2.4.2 Judge, AUW Cultural Competitions (2020–2022)</h4>
+									<ul>
+										<li>Evaluated student performances and fostered cross-cultural exchange.</li>
+										<li>Reinforced the principle that community-building fosters better academic engagement.</li>
+									</ul>
+								</div>
+								<div class="card">
+									<h3>2.5 Professional Development & Training (Chronological)</h3>
+									<h4>2.5.1 2014</h4>
+									<ul>
+										<li>NABIC Winter School Fellowship: Attended a 7-day program; contributed to a group report published in NERSC Special Report 91.</li>
+									</ul>
+									<h4>2.5.2 2017</h4>
+									<ul>
+										<li>AuthorAID Online Course: Focus on research writing; peer-reviewed papers, earned a merit certificate.</li>
+									</ul>
+									<h4>2.5.3 2023</h4>
+									<ul>
+										<li>Graduate Student Orientation, UTD: Learned university policies, campus resources, student support services.</li>
+										<li>RA/TA FERPA Compliance: Understood privacy regulations and best practices for handling student data.</li>
+									</ul>
+									<h4>2.5.4 2024</h4>
+									<ul>
+										<li>UTD SPUR Judge (STEAM Section): Judged 3 undergrad research posters, deepened my perspective on guiding student innovation.</li>
+									</ul>
+									<h4>2.5.5 2025</h4>
+									<ul>
+										<li>UTD Copyright Training: Emphasized fair use, intellectual property guidelines, and legal responsibilities in course material usage.</li>
+										<li>UT Dallas CTL Workshop: Documenting Evidence of Effective Teaching: Reinforced the importance of showing what students do to demonstrate learning progress.</li>
+									</ul>
+									<h4>2.5.6 Research Assistantship (2024–Present)</h4>
+									<p>MINTS Lab, UT Dallas: Being a graduate student in MINTS Lab at UT Dallas under the supervision of Prof Dr. David Lary I join the weekly discussion that helps the team members for the continuous research works. The MINTS team has produced a fleet of autonomous environmental robots comprised of aerial and walking robots, as well as robotic boats. These technologies enable sensors to enter hazardous or isolated areas, such as bodies of water. Being a new member of them I engage in thought provocative discussions to move forward with my project within the framework of the lab. This lab also helps shape my thought process during the class in case any students ask any advanced questions regarding AI, Automation, Air quality, weather systems, etc.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-        <!-- About Me -->
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>I’m a graduate student at UT Dallas specializing in data science. My expertise lies in applying machine learning, geospatial analysis, and data visualization to real-world challenges in agriculture and public health.</p>
+				<!-- Evidence -->
+					<section id="evidence" class="section">
+						<div class="container">
+							<header>
+								<h2>Evidence of Student Engagement and Active Learning</h2>
+							</header>
+							<p>This chapter illustrates how students in my classes take an active role in their own learning. By showcasing both in-class activities and beyond-the-classroom moments, these images demonstrate the breadth of engagement, collaboration, and mentorship that define my teaching.</p>
+							<div class="card-container">
+								<div class="card">
+									<h3>3.1 In-Class Activities</h3>
+									<p>Below are photographs capturing the dynamic nature of student learning in real time—whether tackling problem sets, giving board presentations, or working in small groups.</p>
+									<figure>
+										<img src="images/pic01.jpg" alt="Demonstrating concepts with a visual aid" class="image featured" />
+										<figcaption>(a) Image 2. Demonstrating concepts with a visual aid while students listen intently, asking clarifying questions.</figcaption>
+									</figure>
+									<figure>
+										<img src="images/pic02.jpg" alt="Despite a power outage" class="image featured" />
+										<figcaption>(b) Image 3. Despite a power outage, students use phone flashlights to continue problem-solving—showcasing their dedication.</figcaption>
+									</figure>
+									<p>Figure 3.1: Adapting to unexpected circumstances while maintaining active engagement.</p>
+									<!-- Add more figures similarly, using placeholders for images -->
+								</div>
+								<div class="card">
+									<h3>3.2 Beyond the Classroom</h3>
+									<p>Outside the traditional lecture space, students and faculty share cultural, research, and celebratory moments, further strengthening the learning community.</p>
+								</div>
+								<div class="card">
+									<h3>3.3 Summary of Student-Centered Evidence</h3>
+									<p>From labs and group discussions to festivals and graduation ceremonies, these photographs testify to a dynamic and supportive learning ecosystem where:</p>
+									<ul>
+										<li>Collaboration is Key: Students frequently rely on each other’s perspectives, leading to collective problem-solving rather than isolated work.</li>
+										<li>Teacher as Facilitator: My role often shifts to guiding, questioning, and encouraging rather than solely delivering lectures.</li>
+										<li>Inclusive Community: Festive events and celebratory moments complement rigorous academics, reinforcing trust and motivation.</li>
+										<li>Mentorship and Growth: Regular interactions with colleagues, mentors, and visiting scholars expand the horizon of teaching methods and student goals.</li>
+									</ul>
+									<p>Such an environment consistently yields higher engagement, stronger conceptual understanding, and a tangible sense of excitement about learning.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-            <h3>Skills</h3>
-            <ul>
-                <li>Python (Pandas, Geopandas, Rasterio, Scikit-learn, XGBoost)</li>
-                <li>Machine Learning & Model Explainability (SHAP, LIME)</li>
-                <li>Geospatial Data Processing (GDAL, QGIS, Remote Sensing)</li>
-                <li>Interactive Dashboards (Plotly Dash, Streamlit, Tableau)</li>
-            </ul>
+				<!-- CV -->
+					<section id="cv" class="section">
+						<div class="container">
+							<header>
+								<h2>Curriculum Vitae</h2>
+							</header>
+							<div class="card">
+								<h3>Personal Information</h3>
+								<p>Faiz Ahmad<br>* McCallum Blvd *, Dallas, TX 75252<br>###<br>fxa230012@utdallas.edu faiz.ahmad@auw.edu.bd</p>
+								<p>Sex Male | Nationality Bangladeshi</p>
+							</div>
+							<div class="card">
+								<h3>Personal Statement</h3>
+								<p>As a PhD student and dedicated TA, I blend my strong foundation in physics and mathematics with a passion for evidence-based, hands-on learning. I facilitate dynamic lab experiences that foster critical thinking, collaboration, and practical problem-solving. Driven by innovative research and a commitment to sustainable development, I continuously learn and inspire future scientists.</p>
+							</div>
+							<!-- Add more cards for Work Experience, Education, etc., using the full CV content -->
+							<div class="card">
+								<h3>Work Experience</h3>
+								<ul>
+									<li>2023 08 15 - to date: PhD student and Teaching assistant at the University of Texas at Dallas...</li>
+									<!-- Include detailed bullet points from CV -->
+								</ul>
+							</div>
+							<!-- Continue with other sections -->
+						</div>
+					</section>
 
-            <h3>Education</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>MS in Data Science – University of Texas at Dallas</h4>
-                    <span>2023 – Present</span>
-                </div>
-                <div class="timeline-item">
-                    <h4>BS in Computer Science – University of Chittagong</h4>
-                    <span>2016 – 2020</span>
-                </div>
-            </div>
+				<!-- Syllabi -->
+					<section id="syllabi" class="section">
+						<div class="container">
+							<header>
+								<h2>Sample Syllabi</h2>
+							</header>
+							<p>These PDFs contain syllabi I created for specific courses. Please note that this syllabus was used during a COVID-19 period while some of the classes were still online. A similar syllabus I used over the years at the Asian University of Women while I was teaching there for around 7 long years every semester for the multiple levels of pre-undergraduate students. Also, note that some of the items are university policy such as plagiarism and academic integrity section.</p>
+							<div class="card">
+								<h3>ACCESS ACADEMY MATH0200: PRECALCULUS</h3>
+								<!-- Include full syllabus content in paragraphs and lists -->
+							</div>
+						</div>
+					</section>
 
-            <h3>Experience</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Graduate Research Assistant – UT Dallas</h4>
-                    <span>2024 – Present</span>
-                    <p>Working on large-scale geospatial data processing & predictive modeling for agriculture and health.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Data Analyst Intern – Agricultural Research Institute</h4>
-                    <span>2021 – 2022</span>
-                    <p>Processed remote sensing and agricultural datasets for policy-level insights.</p>
-                </div>
-            </div>
-        </section>
+				<!-- Course Material -->
+					<section id="course-material" class="section">
+						<div class="container">
+							<header>
+								<h2>Course Material - Example of Practice Quiz</h2>
+							</header>
+							<div class="card">
+								<!-- Include quiz questions and answers -->
+							</div>
+						</div>
+					</section>
 
-        <!-- Contact -->
-        <section id="contact" class="container">
-            <h2>Contact</h2>
-            <p>Feel free to connect for collaborations or opportunities:</p>
-            <p><strong>Email:</strong> <a href="mailto:albert.faiz@utdallas.edu">albert.faiz@utdallas.edu</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-        </section>
-    </div>
+				<!-- Evaluations -->
+					<section id="evaluations" class="section">
+						<div class="container">
+							<header>
+								<h2>Student Evaluations (IDEA Forms, etc.)</h2>
+							</header>
+							<div class="card">
+								<!-- Include evaluation data, tables, etc. -->
+							</div>
+						</div>
+					</section>
 
-    <!-- Footer -->
-    <div id="footer" style="text-align:center; padding:20px; background:#f0f0f5;">
-        <p>&copy; Albert Faiz 2025. All rights reserved.</p>
-    </div>
+				<!-- Performance Reviews -->
+					<section id="performance" class="section">
+						<div class="container">
+							<header>
+								<h2>Performance Reviews at UTD</h2>
+							</header>
+							<p>Below is one of my Performance reviews PDF form (e.g., 4 pages). Please note that this one review and other review scores are aggregated above in table 2.2.</p>
+							<div class="card">
+								<!-- Include review content -->
+							</div>
+						</div>
+					</section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+				<!-- Contact -->
+					<section id="contact" class="section">
+						<div class="container">
+							<header>
+								<h2>Contact</h2>
+							</header>
+							<p>Feel free to reach out for collaborations or inquiries.</p>
+							<ul class="icons">
+								<li><a href="mailto:fxa230012@utdallas.edu">Email: fxa230012@utdallas.edu</a></li>
+								<li><a href="https://github.com/yourusername">Github</a></li>
+								<li><a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<ul class="copyright">
+					<li>&copy; Faiz Ahmad 2025. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				// Add smooth scrolling to nav links
+				$('#nav a').on('click', function(e) {
+					e.preventDefault();
+					var target = $(this).attr('href');
+					$('html, body').animate({
+						scrollTop: $(target).offset().top
+					}, 800);
+				});
+			</script>
+
+	</body>
 </html>
